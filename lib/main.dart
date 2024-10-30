@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
       theme: brightness == Brightness.light ? theme.light() : theme.dark(),
       routerConfig: Routefly.routerConfig(
         routes: routes,
+        initialPath: '/views/welcome',
       ),
     );
   }

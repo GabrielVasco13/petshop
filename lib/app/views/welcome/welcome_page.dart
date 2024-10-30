@@ -10,6 +10,14 @@ class WelcomePage extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.onPrimary,
         title: const Text('Welcome to Flutter'),
       ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            // Navigate to another page if needed
+          },
+          child: const Text('Get Started'),
+        ),
+      ),
     );
   }
 }

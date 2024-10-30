@@ -2,6 +2,9 @@
 
 import 'package:routefly/routefly.dart';
 
+import 'app/views/checkout/checkout_page.dart' as a2;
+import 'app/views/payment/payment_page.dart' as a3;
+import 'app/views/service/service_page.dart' as a1;
 import 'app/views/welcome/welcome_page.dart' as a0;
 
 List<RouteEntity> get routes => [
@@ -14,6 +17,33 @@ List<RouteEntity> get routes => [
           const a0.WelcomePage(),
         ),
       ),
+      RouteEntity(
+        key: '/views/service',
+        uri: Uri.parse('/views/service'),
+        routeBuilder: (ctx, settings) => Routefly.defaultRouteBuilder(
+          ctx,
+          settings,
+          const a1.ServicePage(),
+        ),
+      ),
+      RouteEntity(
+        key: '/views/checkout',
+        uri: Uri.parse('/views/checkout'),
+        routeBuilder: (ctx, settings) => Routefly.defaultRouteBuilder(
+          ctx,
+          settings,
+          const a2.CheckoutPage(),
+        ),
+      ),
+      RouteEntity(
+        key: '/views/payment',
+        uri: Uri.parse('/views/payment'),
+        routeBuilder: (ctx, settings) => Routefly.defaultRouteBuilder(
+          ctx,
+          settings,
+          const a3.PaymentPage(),
+        ),
+      ),
     ];
 
 const routePaths = (
@@ -21,5 +51,8 @@ const routePaths = (
   views: (
     path: '/views',
     welcome: '/views/welcome',
+    service: '/views/service',
+    checkout: '/views/checkout',
+    payment: '/views/payment',
   ),
 );
